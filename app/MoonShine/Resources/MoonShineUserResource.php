@@ -43,6 +43,12 @@ class MoonShineUserResource extends ModelResource
 
     protected bool $columnSelection = true;
 
+    protected bool $createInModal = true;
+
+    protected bool $editInModal = true;
+
+    protected bool $detailInModal = false;
+
     public function getTitle(): string
     {
         return __('moonshine::ui.resource.admins_title');
