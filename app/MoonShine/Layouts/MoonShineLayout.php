@@ -33,6 +33,7 @@ use MoonShine\UI\Components\{Breadcrumbs,
 use App\MoonShine\Resources\BrandResource;
 use MoonShine\MenuManager\MenuItem;
 use App\MoonShine\Resources\DepartmentResource;
+use App\MoonShine\Resources\PositionResource;
 
 final class MoonShineLayout extends AppLayout
 {
@@ -47,8 +48,9 @@ final class MoonShineLayout extends AppLayout
     {
         return [
             ...parent::menu(),
-            MenuItem::make('Brands', BrandResource::class),
-            MenuItem::make('Departments', DepartmentResource::class),
+            MenuItem::make('Brands', BrandResource::class) ->icon('list-bullet'),
+            MenuItem::make('Departments', DepartmentResource::class) ->icon('building-office'),
+            MenuItem::make('Positions', PositionResource::class) -> icon('briefcase'),
         ];
     }
 
