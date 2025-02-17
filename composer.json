@@ -12,6 +12,7 @@
         "php": "^8.2",
         "laravel/framework": "^11.31",
         "laravel/tinker": "^2.9",
+        "moonshine/import-export": "^1.0",
         "moonshine/moonshine": "^3.5"
     },
     "require-dev": {
