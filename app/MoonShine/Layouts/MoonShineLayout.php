@@ -35,6 +35,7 @@ use MoonShine\MenuManager\MenuItem;
 use App\MoonShine\Resources\DepartmentResource;
 use App\MoonShine\Resources\PositionResource;
 use App\MoonShine\Resources\EmployeeResource;
+use App\MoonShine\Resources\AssetCategoryResource;
 
 final class MoonShineLayout extends AppLayout
 {
@@ -53,6 +54,7 @@ final class MoonShineLayout extends AppLayout
             MenuItem::make('Departments', DepartmentResource::class) ->icon('building-office'),
             MenuItem::make('Positions', PositionResource::class) -> icon('briefcase'),
             MenuItem::make('Employees', EmployeeResource::class) -> icon('user-group'),
+            MenuItem::make('Categories', AssetCategoryResource::class) ->icon('list-bullet'),
         ];
     }
 

@@ -15,6 +15,7 @@ use App\MoonShine\Resources\BrandResource;
 use App\MoonShine\Resources\DepartmentResource;
 use App\MoonShine\Resources\PositionResource;
 use App\MoonShine\Resources\EmployeeResource;
+use App\MoonShine\Resources\AssetCategoryResource;
 
 class MoonShineServiceProvider extends ServiceProvider
 {
@@ -35,6 +36,7 @@ class MoonShineServiceProvider extends ServiceProvider
                 DepartmentResource::class,
                 PositionResource::class,
                 EmployeeResource::class,
+                AssetCategoryResource::class,
             ])
             ->pages([
                 ...$config->getPages(),
