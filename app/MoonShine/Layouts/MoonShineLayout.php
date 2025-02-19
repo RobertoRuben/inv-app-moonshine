@@ -36,6 +36,7 @@ use App\MoonShine\Resources\DepartmentResource;
 use App\MoonShine\Resources\PositionResource;
 use App\MoonShine\Resources\EmployeeResource;
 use App\MoonShine\Resources\AssetCategoryResource;
+use App\MoonShine\Resources\AssetResource;
 
 final class MoonShineLayout extends AppLayout
 {
@@ -50,11 +51,12 @@ final class MoonShineLayout extends AppLayout
     {
         return [
             ...parent::menu(),
-            MenuItem::make('Brands', BrandResource::class) -> icon('list-bullet'),
+            MenuItem::make('Brands', BrandResource::class) -> icon('shopping-bag'),
             MenuItem::make('Departments', DepartmentResource::class) ->icon('building-office'),
             MenuItem::make('Positions', PositionResource::class) -> icon('briefcase'),
             MenuItem::make('Employees', EmployeeResource::class) -> icon('user-group'),
-            MenuItem::make('Categories', AssetCategoryResource::class) ->icon('list-bullet'),
+            MenuItem::make('Categories', AssetCategoryResource::class) ->icon('tag'),
+            MenuItem::make('Assets', AssetResource::class) ->icon('archive-box'),
         ];
     }
 
