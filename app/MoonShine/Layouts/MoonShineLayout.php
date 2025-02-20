@@ -68,7 +68,11 @@ final class MoonShineLayout extends AppLayout
                 MenuItem::make('Assets', AssetResource::class) ->icon('archive-box'),
             ]) ->icon('cube'),
 
-            MenuItem::make('TransactionTypes', TransactionTypeResource::class),
+            MenuGroup::make('Transaction Management', [
+                MenuItem::make('Transaction Types', TransactionTypeResource::class) ->icon('squares-2x2'),
+            ]) ->icon('arrow-path'),
+
+
         ];
     }
 
