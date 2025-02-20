@@ -39,6 +39,7 @@ use App\MoonShine\Resources\PositionResource;
 use App\MoonShine\Resources\EmployeeResource;
 use App\MoonShine\Resources\AssetCategoryResource;
 use App\MoonShine\Resources\AssetResource;
+use App\MoonShine\Resources\TransactionTypeResource;
 
 final class MoonShineLayout extends AppLayout
 {
@@ -65,8 +66,9 @@ final class MoonShineLayout extends AppLayout
                 MenuItem::make('Brands', BrandResource::class) -> icon('tag'),
                 MenuItem::make('Categories', AssetCategoryResource::class) ->icon('squares-2x2'),
                 MenuItem::make('Assets', AssetResource::class) ->icon('archive-box'),
-            ]) ->icon('cube')
+            ]) ->icon('cube'),
 
+            MenuItem::make('TransactionTypes', TransactionTypeResource::class),
         ];
     }
 
