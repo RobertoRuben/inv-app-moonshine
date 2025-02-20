@@ -13,7 +13,8 @@
         "laravel/framework": "^11.31",
         "laravel/tinker": "^2.9",
         "moonshine/import-export": "^1.0",
-        "moonshine/moonshine": "^3.5"
+        "moonshine/moonshine": "^3.5",
+        "visual-ideas/moonshine-spatie-medialibrary": "^3.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",

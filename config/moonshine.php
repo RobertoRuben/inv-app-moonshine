@@ -20,7 +20,7 @@ use MoonShine\Laravel\Pages\LoginPage;
 use MoonShine\Laravel\Pages\ProfilePage;
 
 return [
-    'title' => env('MOONSHINE_TITLE', 'MoonShine'),
+    'title' => env('MOONSHINE_TITLE', 'Inventory App'),
     'logo' => 'vendor/moonshine/logo.svg',
     'logo_small' => 'vendor/moonshine/logo-small.svg',
 
@@ -32,7 +32,7 @@ return [
 
     // Routing
     'domain' => env('MOONSHINE_DOMAIN'),
-    'prefix' => env('MOONSHINE_ROUTE_PREFIX', 'admin'),
+    //'prefix' => env('MOONSHINE_ROUTE_PREFIX', 'admin'),
     'page_prefix' => env('MOONSHINE_PAGE_PREFIX', 'page'),
     'resource_prefix' => env('MOONSHINE_RESOURCE_PREFIX', 'resource'),
     'home_route' => 'moonshine.index',
@@ -89,9 +89,8 @@ return [
         'error' => ErrorPage::class,
     ],
 
-    // Localizations
-    'locale' => 'en',
     'locales' => [
-        // en
+        'en',
+        'es',
     ],
 ];
