@@ -68,7 +68,8 @@ class AssetResource extends ModelResource implements HasImportExportContract
                 ->dir('assets')
                 ->nullable(),
             Text::make('Category', 'category.name'),
-            Text::make('Acquisition Date', 'acquisition_date'),
+            Date::make('Acquisition Date', 'acquisition_date')
+                ->format('Y-m-d'),
             Switcher::make('Status', 'status')
                 ->onValue(1)
                 ->offValue(0)
@@ -178,7 +179,8 @@ class AssetResource extends ModelResource implements HasImportExportContract
             Text::make('Code', 'code'),
             Text::make('Label', 'label'),
             Text::make('Name', 'name'),
-            Text::make('Acquisition Date', 'acquisition_date'),
+            Date::make('Acquisition Date', 'acquisition_date')
+                ->format('Y-m-d'),
             Select::make('Status', 'status')
                 ->options([
                     false => 'Inactive',
@@ -198,7 +200,16 @@ class AssetResource extends ModelResource implements HasImportExportContract
 
     protected function rules(mixed $item): array
     {
-        return [];
+        return [
+            'bar_code' => ['required', 'string', 'max:13', 'min:1', 'unique:assets,bar_code,' . $item?->id],
+            'code' => ['required', 'numeric', 'max:999999999999999', 'min:1', 'unique:assets,code,' . $item?->id],
+            'label'    => ['required', 'string', 'max:255'],
+            'name'     => ['required', 'string', 'max:255'],
+            'acquisition_date' => ['required', 'date'],
+            'status'   => ['boolean'],
+            'quantity' => ['required', 'integer', 'min:1'],
+            'image' => ['nullable', 'image', 'max:2048'],
+        ];
     }
 
     protected function search():array
