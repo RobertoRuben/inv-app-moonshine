@@ -40,6 +40,7 @@ use App\MoonShine\Resources\EmployeeResource;
 use App\MoonShine\Resources\AssetCategoryResource;
 use App\MoonShine\Resources\AssetResource;
 use App\MoonShine\Resources\TransactionTypeResource;
+use App\MoonShine\Resources\AssetTransactionResource;
 
 final class MoonShineLayout extends AppLayout
 {
@@ -70,7 +71,9 @@ final class MoonShineLayout extends AppLayout
 
             MenuGroup::make('Transaction Management', [
                 MenuItem::make('Transaction Types', TransactionTypeResource::class) ->icon('squares-2x2'),
+                MenuItem::make('Asset Transactions', AssetTransactionResource::class) ->icon('list-bullet'),
             ]) ->icon('arrow-path'),
+
 
 
         ];

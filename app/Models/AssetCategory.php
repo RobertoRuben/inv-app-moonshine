@@ -16,4 +16,9 @@ class AssetCategory extends Model
 
     public $timestamps = false;
 
+    public function assets()
+    {
+        return $this->hasMany(\App\Models\Asset::class, 'asset_category_id');
+    }
+
 }
